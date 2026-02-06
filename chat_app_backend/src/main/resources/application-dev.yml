@@ -1,0 +1,9 @@
+postgres:
+  port: 5432
+  name: chat_app
+  username: postgres
+  password: 123456
+jwt:
+  key: rikkeiacademydfrtgsyuhidj21ue120938219321ndsad
+  time-access: 864000
+  time-refresh: 84000000

@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: chat_app_backend
+    config:
+        import: classpath:application-dev.yml
+    datasource:
+        url: jdbc:postgresql://localhost:${postgres.port}/${postgres.name}
+        username: ${postgres.username}
+        password: ${postgres.password}
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                format_sql: true
+
+# jwt
+jwt:
+    secret:
+        key: ${jwt.key}
+    expired:
+        access: ${jwt.time-access}
+        refresh: ${jwt.time-refresh}

@@ -1,0 +1,9 @@
+postgres:
+  port:
+  name:
+  username:
+  password:
+jwt:
+  key:
+  time-access:
+  time-refresh:
