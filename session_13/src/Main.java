@@ -1,15 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Set<Integer> numbers1 = new HashSet<>();
+        numbers1.add(1);
+        numbers1.add(2);
+        numbers1.add(3);
+        numbers1.add(4);
+        numbers1.add(5);
+        Set<Integer> numbers2 = new HashSet<>();
+        numbers2.add(9);
+        numbers2.add(8);
+        numbers2.add(7);
+        numbers2.add(5);
+        System.out.println(numbers1);
+        numbers1.removeAll(numbers2);
+        System.out.println(numbers1);
     }
 }
